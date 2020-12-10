@@ -1,56 +1,79 @@
-/* App-wide styling */
-html {
-  background: black;
-}
+/* Styling heavily influenced by the starter code that was provided
+*  but I changed it to make it my own.
+*  I followed the styling based on the SMACCS architecture as best I could
+*  as the starter code did. Learn more at http://smacss.com/
+*/
 
+/* App-wide styling */
 body {
   margin: 0;
-  height: auto;
   width: 100%;
-  background-image: linear-gradient(to bottom right, rgba(0, 195, 255, 0.6), rgba(0, 195, 255, 0.2));
+  background-image: linear-gradient(to top left, rgba(2, 149, 194, 0.74), rgba(0, 37, 48, 1));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+  color: white;
 }
 
 p {
   font-family: 'Source Serif Pro', serif;
   color: white;
+  font-size: 1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nunito', sans-serif;
-  color: white
+main {
+  margin: 10vh 1em 10vh;
 }
 
-section .section-container {
-  margin: 0 auto 0 0;
-  text-align: left;
-  padding: 1em;
+section {
+  position: relative;
+  min-height: 75vh;
 }
 
-section:nth-of-type(even) .section-container {
-  margin: 0 0 0 auto;
-  text-align: right;
-  padding: 1em;
+/* Heading Styles */
+.main-header {
+  min-height: 40vh;
+  padding-top: 3em;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-weight: 900;
 }
 
 h2 {
+  font-size: 2.5em;
+  font-weight: 700;
   border-bottom: 1px solid aquamarine;
 }
 
-/* Styling for Mobile Screens */
-@media screen and (max-width: 480px) {
+/* Styling the sections for larger screens */
+@media screen and (min-width: 600px) {
   h1 {
-    font-size: 3em;
-    font-weight: 900;
+    font-size: 6em;
+    padding-left: 3rem;
   }
 
   h2 {
-    font-size: 2.5em;
-    font-weight: 700;
+    font-size: 3.5em;
   }
 
-  section {
-    position: relative;
-    max-width: 90%;
+  section:nth-of-type(odd) .section-container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
   }
+
+  .section-container {
+    max-width: 75%;
+    padding: 3em;
+  }
+}
+
+/* Footer Styling */
+.page-footer {
+  background: black;
+  padding: 3rem;
 }
 
