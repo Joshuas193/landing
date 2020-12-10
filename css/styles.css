@@ -1,21 +1,56 @@
+/* App-wide styling */
 html {
-  width: 100%;
-  height: 100%;
-  color: lightgray;
+  background: black;
 }
 
 body {
   margin: 0;
-  height: 100%;
+  height: auto;
   width: 100%;
-  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6));
+  background-image: linear-gradient(to bottom right, rgba(0, 195, 255, 0.6), rgba(0, 195, 255, 0.2));
 }
 
 p {
   font-family: 'Source Serif Pro', serif;
+  color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito', sans-serif;
+  color: white
+}
+
+section .section-container {
+  margin: 0 auto 0 0;
+  text-align: left;
+  padding: 1em;
+}
+
+section:nth-of-type(even) .section-container {
+  margin: 0 0 0 auto;
+  text-align: right;
+  padding: 1em;
+}
+
+h2 {
+  border-bottom: 1px solid aquamarine;
+}
+
+/* Styling for Mobile Screens */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 3em;
+    font-weight: 900;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+
+  section {
+    position: relative;
+    max-width: 90%;
+  }
 }
 
