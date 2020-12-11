@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-family: 'Source Serif Pro', serif;
   color: white;
+  line-height: 1.5em;
   font-size: 1em;
 }
 
@@ -77,3 +78,49 @@ h2 {
   padding: 3rem;
 }
 
+/* Styling for the active section */
+section.active-class {
+  background: linear-gradient(to top left, rgba(6, 30, 241, 0.15), rgba(89, 147, 165, 0.5));
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for the Navigation bar */
+.nav-header {
+  background:  rgba(0, 37, 48, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-links ul {
+  text-align: left;
+  margin: 0;
+  padding-right: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links .nav-links a {
+  display: block;
+  padding: 1em;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links .nav-links a:hover {
+  background: deepskyblue;
+  color: white;
+  transition: ease-in 0.5s all;
+}
+/*
+<header class="page__header">
+  <nav class="navbar__menu">
+    <!-- Navigation starts as empty UL that will be populated with JS -->
+    <ul id="navbar__list"></ul>
+  </nav>
+</header>
+*/
