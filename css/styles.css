@@ -127,18 +127,19 @@ section.active-class {
   font: 700 1em/1.4em 'Source Serif Pro', serif;
   text-decoration: none;
   color: goldenrod;
+  border-radius: 5px;
 }
 
 .nav-links a:hover, .nav-links a:active {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.3);
   color: white;
   transition: ease-in 0.4s all;
 }
 
 @media screen and (min-width: 600px) {
   .nav-links a:link, .nav-links a:visited {
-    padding: 1rem 2rem;
-    font: 700 1.5em/2em 'Source Serif Pro', serif;
+    padding: 1rem 1.5rem;
+    font: 700 1.4em/1.8em 'Source Serif Pro', serif;
   }
 }
 

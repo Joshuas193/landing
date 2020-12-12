@@ -13,18 +13,26 @@
  *
 */
 
-/**
- * Define Global Variables
- *
-*/
+/* Global variables for  populating the menu */
+const navList = document.querySelector('.nav-links');
+const sectionNames = document.querySelectorAll('section[id*="section"]');
 
+/* Function to return the screen to the top on refresh. Source: Stack Overflow */
+window.onbeforeunload = function () {
+  window.scrollTo(0,0);
+};
 
-/**
- * End Global Variables
- * Start Helper Functions
- *
-*/
-
+/* Function I created to iterate through all sections and display their data-nav value as the a link in the nav-bar */
+function buildNav() {
+  for (const sectionName of sectionNames) {
+    let list = document.createElement('li');
+    let addedHtml = `<a href="#${sectionName.dataset.nav}">${sectionName.dataset.nav}</a>`;
+    navList.appendChild(list);
+    list.insertAdjacentHTML("afterbegin", addedHtml);
+  }
+}
+/* Calling the function I built */
+buildNav();
 
 
 /**
