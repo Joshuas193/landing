@@ -34,8 +34,13 @@ function buildNav() {
 /* Calling the function I built */
 buildNav();
 
-/* Adding the active-class to the focused section */
-
+/* Adding the active-class to the focused section
+document.querySelector('a[href*=section]').onclick = function () {
+  let anchorId = document.querySelector('a[href*=section]').value;
+  let sectionId = document.querySelector('[id^=section]').id;
+  console.log(anchorId);
+  console.log(sectionId);
+}  */
 
 // Scroll to anchor ID using scrollTO event
 
