@@ -20,7 +20,7 @@ window.onbeforeunload = function () {
 
 /* Global variables for  populating the menu */
 const navList = document.querySelector('.nav-links');
-const sectionNames = document.querySelectorAll('section[id*="section"]');
+const sectionNames = document.querySelectorAll('section');
 
 /* Function I created to iterate through all sections and display their data-nav value as the link in the nav-bar */
 function buildNav() {
