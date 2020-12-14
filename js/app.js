@@ -28,19 +28,14 @@ function buildNav() {
     const list = document.createElement('li');
     const addedHtml = `<a href="#${sectionName.id}">${sectionName.dataset.nav}</a>`;
     navList.appendChild(list);
-    list.insertAdjacentHTML("afterbegin", addedHtml);
+    list.insertAdjacentHTML('afterbegin', addedHtml);
   }
 }
 /* Calling the function I built */
 buildNav();
 
-/* Adding the active-class to the focused section
-document.querySelector('a[href*=section]').onclick = function () {
-  let anchorId = document.querySelector('a[href*=section]').value;
-  let sectionId = document.querySelector('[id^=section]').id;
-  console.log(anchorId);
-  console.log(sectionId);
-}  */
+/* Adding the active-class to the focused section */
+
 
 // Scroll to anchor ID using scrollTO event
 
