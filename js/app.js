@@ -50,6 +50,7 @@ function buildNav() {
 buildNav();
 
 /* Adding the active-class to the focused section */
+
 document.addEventListener('scroll', function () {
   const active = isInViewport(mySection) ?
   mySection.classList.add('active-class') : mySection.classList.remove('active-class');
