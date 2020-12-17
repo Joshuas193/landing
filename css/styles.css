@@ -5,6 +5,7 @@
 */
 
 /* App-wide styling */
+
 body {
   margin: 0;
   width: 100%;
@@ -23,12 +24,17 @@ p {
   font-size: 1em;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   p {
-    font-family: 'Source Serif Pro', serif;
-    color: white;
+    line-height: 1.4em;
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  p {
     line-height: 1.75em;
-    font-size: 1.25em;
+    font-size: 1.4em;
   }
 }
 
