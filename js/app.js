@@ -16,8 +16,6 @@
 /* Global variables */
 const navList = document.querySelector('.nav-links');
 const sectionNames = document.querySelectorAll('section');
-const links = document.querySelectorAll('.nav-links li');
-
 
 /* Function to return the screen to the top on refresh. Source: Stack Overflow */
 window.onbeforeunload = function () {
@@ -39,9 +37,10 @@ buildNav();
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
-      rect.top >= -125 &&
+      rect.top >= -100 &&
+      rect.top < 100 &&
       rect.left >= 0 &&
-      rect.bottom <= 1000 &&
+      rect.bottom <= (window.innerHeight - 50) &&
       rect.right <= window.innerWidth
   );
 }
@@ -56,9 +55,11 @@ for (const sectionName of sectionNames) {
   });
 }
 
+// declaring variable for the links listener after the  navbar is populated
+const links = document.querySelectorAll('.nav-links li a');
+
 // Scroll to anchor ID using scrollTO event
 for (const link of links) {
-  console.log(link.textContent);
   link.addEventListener('click', clickHandler);
 }
 
@@ -66,8 +67,9 @@ function clickHandler(e) {
   e.preventDefault();
   const href = this.getAttribute("href");
   const offset = document.querySelector(href).offsetTop;
+  console.log(offset);
   scroll({
-    top: offset,
+    top: (offset - 50),
     behavior: "smooth"
   });
 }
