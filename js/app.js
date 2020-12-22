@@ -94,7 +94,8 @@ viewedSection = () => {
 }};
 viewedSection();
 
-// This function makes the nav-bar visible again when back to top clicked
+/* This function makes the nav-bar visible again when back to top clicked
+   and it sets the position and smooth scrolling going bak to the top */
 backToTop = () => {
   const upTop = document.getElementById('up-top');
   upTop.addEventListener('click', (e) => {
