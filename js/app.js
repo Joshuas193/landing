@@ -17,8 +17,8 @@
 const navList = document.querySelector('.nav-links');
 const sectionNames = document.querySelectorAll('section');
 
-// Function to return the screen to the top on refresh. Source: Stack Overflow
-window.onbeforeunload = function () {
+// Function to return the screen to the top on refresh
+window.onbeforeunload = () => {
   window.scrollTo(0,0);
 };
 
