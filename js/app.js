@@ -38,8 +38,8 @@ window.onscroll = () => {
 isInViewport = el => {
   const rect = el.getBoundingClientRect();
   return (
-      rect.top >= -100 &&
-      rect.top < 100 &&
+      rect.top >= -200 &&
+      rect.top < 250 &&
       rect.left >= 0 &&
       rect.bottom <= (window.innerHeight + 100) &&
       rect.right <= window.innerWidth
