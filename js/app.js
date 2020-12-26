@@ -20,7 +20,7 @@ const sectionNames = document.querySelectorAll('section');
 // Function to return the screen to the top on refresh
 window.onbeforeunload = () => {
   window.scrollTo(0,0);
-};
+}
 
 /* This function will hide the navbar on scroll down and show it on scroll up.
    It also shows the back to top button if scrolled down far enough */
@@ -32,7 +32,7 @@ window.onscroll = () => {
       prevPosition = newPosition;
     (newPosition > 1500) ? document.getElementById('up-top').style.display = 'block' :
                            document.getElementById('up-top').style.display = 'none';
-};
+}
 
 // Helper function to determine if an element is in the viewport
 isInViewport = el => {
@@ -51,7 +51,7 @@ timeOut = () => {
   document.querySelector('.nav-header').style.top = '-200px';
 }
 
-// Helper function creating Smooth scrolling and offset top features
+// Helper function creating Smooth scrolling and offset top features. Cannot use arrow function due to "This" being used
 function clickHandler(e) {
   e.preventDefault();
   const href = this.getAttribute("href");
@@ -63,7 +63,7 @@ function clickHandler(e) {
   setTimeout(timeOut, 1200);
 }
 
-// Function I created to iterate through all sections and display their data-nav value as the link in the nav-bar
+// Function to iterate through all sections and display their data-nav value as the link in the nav-bar
 buildNav = () => {
   for (const sectionName of sectionNames) {
     const list = document.createElement('li');
@@ -82,7 +82,7 @@ linkListener = () => {
   }};
 linkListener();
 
-//  Adding the active-class to the in-view section
+// Adding the active-class to the in-view section
 viewedSection = () => {
   for (const sectionName of sectionNames) {
     document.addEventListener('scroll', () => {
@@ -95,10 +95,10 @@ viewedSection = () => {
 viewedSection();
 
 /* This function makes the nav-bar visible again when back to top clicked
-   and it sets the position and smooth scrolling going bak to the top */
+   and it sets the position and smooth scrolling going back to the top */
 backToTop = () => {
   const upTop = document.getElementById('up-top');
-  upTop.addEventListener('click', (e) => {
+  upTop.addEventListener('click', e => {
     e.preventDefault();
     document.getElementById('up-top').style.display = 'none';
     document.querySelector('.nav-header').style.top = '0';
